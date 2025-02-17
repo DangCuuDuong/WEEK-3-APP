@@ -3,6 +3,7 @@ package com.example.week3;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -40,6 +41,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         NavigationView navView = findViewById(R.id.navview);
         navView.setNavigationItemSelectedListener(this);
+        Button btnNext = findViewById(R.id.btnNext1);
+        btnNext.setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, LottieActivity.class));
+        });
     }
 
     @Override
